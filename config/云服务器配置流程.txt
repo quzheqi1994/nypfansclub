@@ -1,0 +1,23 @@
+开启80、443、8000-8080端口入站
+安装vcredist_x64.exe
+安装wampserver2.5
+修改httpd.conf ，参考 https://blog.csdn.net/albert_1000/article/details/54849470
+以上可以访问了。
+配置SSL证书
+ 修改httpd.conf
+  LoadModule ssl_module modules/mod_ssl.so
+  Include conf/extra/httpd-ssl.conf
+  LoadModule socache_shmcb_module modules/mod_socache_shmcb.so
+ 修改httpd-ssl.conf，设置正确的apache目录然后按照腾讯云描述设置正确的证书路径
+  DocumentRoot "c:/wamp/www"
+  ServerName www.nypfansclub.cn
+  ServerAdmin admin@example.com
+以上HTTPS可用
+
+数据库密码配置 参考https://yq.aliyun.com/ziliao/53466
+论坛邮箱SMTP设置 ssl://smtp.exmail.qq.com 端口号465 开启验证 按照账密设置
+
+论坛改密码的问题，member_getpasswd.php文件 中的 第16行改为 if($_GET['uid'] && $_GET['id']) {
+404页面配置根目录下 .htaccess 文件中写入 ErrorDocument 404 /404.html
+
+安装Git管理

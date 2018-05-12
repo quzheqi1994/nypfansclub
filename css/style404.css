@@ -1,23 +1,9 @@
-﻿/*
-@font-face {
-	font-family: "SerFont";
-	src:url('SerFont.eot'); 
-	src:local('SerFont Regular'), 
-		local('SerFont'), 
-		url('SerFont.woff') format('woff'), /*无此类字体/
-		url('SerFont.ttf') format('truetype'), 
-		url('SerFont.svg#SerFont') format('svg'); /*无此类字体/
-
-}
-/*=================================
+﻿/*=================================
     GENERAL STYLES
  ==================================*/
 body {
 	line-height:1.5em;
 	font-family:"Times New Roman",Times,serif;
-	/*font-family:Arial,Helvetica,sans-serif;
-	font-family:"微软雅黑","黑体","宋体";
-	font-family:"Trebuchet MS",Arial,Helvetica,sans-serif;*/
     line-height: 30px;
     font-size: 20px;
 }
@@ -111,6 +97,12 @@ section {
     background-color: #FFF;
     color: #000;
 }
+.lcd a{
+	color: black;
+}
+.lcd a:hover{
+	text-decoration: none;
+}
 /*=================================
     FOOTER SECTION STYLES
 =================================== */
@@ -125,7 +117,7 @@ footer {
 }
 }
 
-    footer a, footer a:hover {
-        color: #000;
-        text-decoration: none;
-    }
+footer a, footer a:hover {
+	color: #000;
+	text-decoration: none;
+}

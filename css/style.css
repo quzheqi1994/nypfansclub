@@ -1,0 +1,174 @@
+/*轮播图*/
+#myCarousel img{width:100%;}
+#Carousel{margin:auto;padding:0}
+/*公演视频*/
+.lead-title{text-align:center;margin:2em;}
+.lead-title h4{height:50px;line-height:50px;color:black;font-weight:800;display:inline-block}
+.lead-title span{font-weight:800;color:black;}
+.banner-bottom h5{text-align:center;color:black;font-weight:800;padding:4px 0;}
+.banner-bottom dd{width:4em;height:2px;margin:5px auto;background:#ffd133}
+.banner-bottom p{text-align:center;color:white;padding:4px 0;}
+@media(max-width:767px ){
+	.lead-title{text-align:center;margin:2em;}
+	.lead-title h4{height:50px;line-height:50px;color:black;font-weight:800;display:inline-block;}
+	.lead-title span a{font-weight:800;color:black;}
+	.banner-bottom h5{text-align:center;color:black;font-weight:800;padding:2px 0;font-size:12px;}
+	.banner-bottom dd{width:4em;height:2px;margin:3px auto;background:#ffd133}
+	.banner-bottom p{text-align:center;color:black;padding:2px 0;font-size:12px;}
+}
+
+/*公告*/
+.alert{
+	margin:5px;
+}
+.alert a{
+	text-decoration:none;
+}
+/*商品部分*/
+.product {
+	padding:10px 2px;
+}
+
+.product a{
+	text-decoration:none;
+}
+
+.product img {
+    width: 100%;
+}
+
+.pro-item {
+    position: relative;
+    box-shadow: 0px 0px 15px 0px #D6D6D6;
+    padding-bottom: 20px;
+}
+
+.thumb-item::before {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    content: "";
+    opacity: 0;
+    z-index: 9;
+    visibility: hidden;
+    transition: all 0.5s ease-out 0s;
+}
+
+.thumb-item .image-front {
+    opacity: 1;
+    visibility: visible;
+}
+
+.thumb-item img {
+    transition: all 0.5s ease-out 0s;
+    padding: 10px 5px;
+}
+
+.image-back {
+    transform: rotateY(180deg);
+    opacity: 0;
+    visibility: hidden;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+.product-top {
+    background: #868686 none repeat scroll 0 0;
+    color: #fff;
+    display: inline-block;
+    right: 0;
+    padding: 0 10px 1px;
+    position: absolute;
+    text-transform: lowercase;
+    top: 0;
+    z-index: 10;
+}
+
+.item-info {
+    text-align: center;
+    margin: 20px 0 0;
+}
+
+.item-info  h4{
+    font-size: 18px;
+    color: #FDA30E;
+    text-decoration: none;
+    transition: 0.5s all;
+    -webkit-transition: 0.5s all;
+    -moz-transition: 0.5s all;
+    -o-transition: 0.5s all;
+    -ms-transition: 0.5s all;
+}
+
+.info-price {
+	padding:0 5px;
+    margin: 5px 0;
+    color: #000;
+}
+
+.info-price span {
+    color: #A7A7A7;
+    margin-left: 10px;
+}
+
+.thumb-item:hover {
+    cursor: pointer;
+}
+
+.thumb-item:hover .image-front {
+    transform: rotateY(180deg);
+    opacity: 0;
+    visibility: hidden;
+}
+
+.thumb-item:hover .image-back {
+    transform: rotateY(0deg);
+    opacity: 1;
+    visibility: visible;
+    background: #f7f7f7;
+}
+
+.thumb-item:hover{
+    top: 83.5%;
+}
+
+.buy {
+    color: #fff;
+    font-size: 16px;
+    padding: 3px 14px;
+    text-decoration: none;
+    display: inline-block;
+    vertical-align: middle;
+    -webkit-transform: translateZ(0);
+    transform: translateZ(0);
+    box-shadow: 0 0 1px rgba(0, 0, 0, 0);
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+    -moz-osx-font-smoothing: grayscale;
+    position: relative;
+    background: #FDA30E;
+}
+
+.buy:hover:before{
+    top: -6px;
+    right: -6px;
+    bottom: -6px;
+    left: -6px;
+}
+
+.buy:before {
+    content: '';
+    position: absolute;
+    border: #FDA30E solid 2px;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    -webkit-transition-duration: 0.3s;
+    transition-duration: 0.3s;
+    -webkit-transition-property: top, right, bottom, left;
+    transition-property: top, right, bottom, left;
+}
