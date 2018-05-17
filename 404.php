@@ -1,9 +1,9 @@
-﻿<html>
+﻿<?php require_once("/heafooer.php");?>
+<html>
 <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
     <title>农燕萍应援站</title>
-	<link href='http://fonts.font.im/css?family=Shadows+Into+Light' rel='stylesheet'/>
     <link href="/css/bootstrap.min.css" rel="stylesheet" />
     <link href="/css/style404.css" rel="stylesheet" />
 </head>
@@ -59,9 +59,7 @@
         </div>
     </section>
     <!-- HEADER DIV REPLICATE END -->
-    <footer>
-        © 2018  黑ICP备18001969号   <a href="http://www.nypfansclub.cn/" target="_blank">农燕萍应援会</a>版权所有
-    </footer>
+<?php echo getFooter();?>
     <script src="/js/jquery.min.js"></script>
     <script src="/js/bootstrap.min.js"></script>
 </body>

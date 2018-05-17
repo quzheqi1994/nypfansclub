@@ -1,25 +1,17 @@
 <?php require_once("../heafooer.php");?>
-
 <!DOCTYPE html>
 <html>
 <head>
-    <meta charset="utf-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no">
-	<title>视频影音</title>
-
-	<script src="/js/jquery.min.js"></script>
-	<script src="/js/bootstrap.min.js"></script>
-	<link  href="/css/bootstrap.min.css" rel="stylesheet" type="text/css"/>
-	<script src="/js/header.js"></script>
-	<script src="js/ElementGen.js"></script>
-	<link  href="/css/header.css" rel="stylesheet" type="text/css"/>
-	<link  href="css/style.css" rel="stylesheet" type="text/css"/>
-	<script src="/js/preloader.js"></script>
-	<link  href="/css/preloader.css" rel="stylesheet" type="text/css"/>
-    <link rel="stylesheet" type="text/css" href="http://cdn.bootcss.com/font-awesome/4.6.0/css/font-awesome.min.css">
+<?php
+	echo getMeta("视频影音");
+	echo getBootStrap(true);
+	echo getHeaFooer(true);
+	echo getSelfStyle();
+?>
+    <link  href="http://cdn.bootcss.com/font-awesome/4.6.0/css/font-awesome.min.css" rel="stylesheet" type="text/css">
 </head>
 <body>
-	<div id="preloader"><span></span><span></span><span></span><span></span><span></span></div>
+<?php echo getPreLoader();?>
 	<div class="main_div">
 <?php echo getHeader(2);?>
 		<!--=========== BEGIN 内容模块 ================-->  

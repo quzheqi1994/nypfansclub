@@ -1,5 +1,5 @@
 /*新闻分类导航样式*/
-@font-face {font-family: "iconfont";src: url('../fonts/iconfont.ttf') format('truetype');}
+@font-face {font-family: "iconfont";src: url('/fonts/iconfont.ttf') format('truetype');}
 
 .pet_nav_list a{
   font-family:"iconfont" !important;

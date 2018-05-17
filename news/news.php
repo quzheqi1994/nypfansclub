@@ -2,23 +2,18 @@
 <!doctype html>
 <html>
 <head>
-    <meta charset="utf-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no">
-	<title>行程安排</title>
-	<script src="/js/jquery.min.js" type="text/javascript"></script>
-	<script src="/js/bootstrap.min.js" type="text/javascript"></script>
-	<link href="/css/bootstrap.min.css" rel="stylesheet" type="text/css">
-	<link href="https://cdn.bootcss.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" type="text/css">
-
-	<script src="/js/header.js"></script>
-	<link  href="/css/header.css" rel="stylesheet" type="text/css"/>
-	<script src="js/wangEditor.min.js" type="text/javascript"></script>
-	<script src="js/comment.js" type="text/javascript"></script>
-	<link  href="css/comment.css" rel="stylesheet" type="text/css">
+<?php
+	echo getMeta("行程安排");
+	echo getBootStrap(true);
+	echo getHeaFooer(false);
+	echo '	<script src="js/wangEditor.min.js" type="text/javascript"></script>';
+	echo getOnlyStyle('comment');
+?>
 	<link  href="css/news.css" rel="stylesheet" type="text/css"/>
+	<link href="https://cdn.bootcss.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" type="text/css">
 </head>
 <body>
-<?php echo getHeader(0);?>
+<?php echo getHeader(1);?>
 <div class="container" style="margin-top:78px;">
 	<div class="row">
 		<div class="col-md-8 col-sm-12">
@@ -28,7 +23,7 @@
 				<a href="#">央视财经</a>
 			</div>
 			<div class="artical">
-				<iframe name="ifd" width="100%" onload="this.height=ifd.document.body.scrollHeight+10" src="/service/videoplayer/player.html" frameborder="0"></iframe>
+				<iframe name="ifd" width="100%" onload="this.height=ifd.document.body.scrollHeight+10" src="/service/videoplayer/" frameborder="0"></iframe>
 				<p>原标题：中国造出“超薄玻璃”，厚度堪比A4纸！生产过程全曝光。。。惊艳世界！</p>
 				<p>　　<strong>玻璃在日常生活中可以说无处不在，几乎是天天能见到，但您见过厚度只有0.12毫米的玻璃吗？0.12毫米是个什么概念，一张A4打印纸的厚度是0.095毫米，也就是说，这种玻璃只比一张纸略厚一点，更神奇的是，这种玻璃还很结实。</strong></p>
 				<p>　　<strong>这种玻璃只比A4纸稍厚 家用轿车150公里时速撞击都毫发无损</strong></p>

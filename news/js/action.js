@@ -161,3 +161,17 @@
         return this;
     }
 })(jQuery, window, document);
+
+$(function(){
+	//行程模块初始化
+	$('.VivaTimeline').vivaTimeline({
+		carousel: true,
+		carouselTime: 3000
+	});
+});
+function changeSwitch(){
+	if($("#collswitch").html()!="收起行程安排")
+		$("#collswitch").html("收起行程安排");
+	else
+		$("#collswitch").html("展开行程安排");
+}

@@ -1,4 +1,5 @@
 <?php
+//获取头部和尾部的内容
 function getHeader($index){
 	$return = '
 	    <!--=========== BEGIN 标题导航模块 ================-->
@@ -62,7 +63,7 @@ function getFooter(){
 						<div class="col-md-6 col-xs-6">
 							<p><span>自媒体</span></p>
 							<p><a href="https://space.bilibili.com/226673030">Bilibili</a></p>
-							<p><a href="#">网易云音乐</a></p>
+							<p><a href="http://music.163.com/#/user/home?id=1309012109">网易云音乐</a></p>
 							<p><a href="#">微信公众号</a></p>
 						</div>
 					</div>
@@ -101,5 +102,54 @@ function getFooter(){
 		</footer>
 		<!--=========== END 底部脚本 ================-->
 	';
+}
+function getPreLoader(){
+	return '	<div id="preloader"><span></span><span></span><span></span><span></span><span></span></div>';
+}
+//获取各种样式
+function getMeta($title){
+	return '	<meta charset="utf-8">
+	<meta name="viewport" content="target-densitydpi=device-dpi, width=device-width, initial-scale=1, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0">
+	<title>'.$title.'</title>';
+}
+function getBootStrap($bWithJS){
+	$return = '
+	<!--bootstrap-->
+	<script src="/js/jquery.min.js"></script>
+	<link  href="/css/bootstrap.min.css" rel="stylesheet" type="text/css"/>
+	';
+	if($bWithJS)
+		$return .='<script src="/js/bootstrap.min.js"></script>
+		';
+	return $return;
+}
+function getHeaFooer($bWithPre){
+	$return= '
+	<!--header and footer-->
+	<script src="/js/header.js"></script>
+	<link  href="/css/header.css" rel="stylesheet" type="text/css"/>';
+	if($bWithPre)
+		$return.='
+	<script src="/js/preloader.js"></script>
+	<link  href="/css/preloader.css" rel="stylesheet" type="text/css"/>';
+	return $return;
+}
+function getSelfStyle($styleAdded=""){
+	$return= '
+	<!--file style and action-->
+	<script src="js/ElementGen.js"></script>
+	<script src="js/action.js"></script>
+	<link  href="css/style.css" rel="stylesheet" type="text/css"/>';
+	$return .= getOnlyStyle($styleAdded);
+	return $return;
+}
+function getOnlyStyle($styleAdded=""){
+	$return= '';
+	if($styleAdded!=""){
+		$return.='
+	<script src="js/'.$styleAdded.'.js"></script>
+	<link  href="css/'.$styleAdded.'.css" rel="stylesheet" type="text/css"/>';
+	}
+	return $return;
 }
 ?>

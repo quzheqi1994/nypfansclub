@@ -17,39 +17,7 @@
 		<!--=========== BEGIN 内容模块 ================-->  
 		<div class="container" style="margin-top:78px;">
 			<div class="row">
-				<div class="featured">
-					<div class="main-vid">
-						<div class="col-md-6 col-sm-12 col-xs-12" id="main-vid" style="margin-bottom:10px;">
-							<div class="zoom-container">
-								<div class="zoom-caption">
-									<span>电台</span>
-									<a href="/SecretBox"></a>
-									<p style="padding:10px;font-size:20px;">小奶瓶的电台专题</p>
-								</div>
-								<img src="/images/shutter_1.jpg"/>
-							</div>
-						</div>
-					</div>
-					<div class="sub-vid">
-						<div class="col-md-3 col-sm-6 col-xs-6" id="sub-vid1"></div>
-						<div class="col-md-3 col-sm-6 col-xs-6" id="sub-vid2"></div>
-					</div>
-					<div class="clear"></div>
-				</div>
-			</div>
-			<div class="row">
 				<div id="main-content" class="col-md-8">
-					<div class="box">
-						<div class="box-header">
-							<h2><i class="fa fa-globe"></i> Featured Videos</h2>
-						</div>
-						<div class="box-content">
-							<div class="row">
-								<div class="col-md-6 col-sm-6 col-xs-6" id="fe-vid1"></div>
-								<div class="col-md-6 col-sm-6 col-xs-6" id="fe-vid2"></div>
-							</div>
-						</div>
-					</div>
 					<div class="box">
 						<div class="box-header">
 							<h2><i class="fa fa-play-circle-o"></i> Random Videos</h2>

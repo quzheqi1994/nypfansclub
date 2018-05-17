@@ -2,25 +2,17 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<meta charset="utf-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
-	<script src="/js/jquery.min.js"></script>
-	<script src="/js/bootstrap.min.js"></script>
-	<script src="/js/ElementGen.js"></script>
-	<script src="/js/header.js"></script>
-	<link  href="/css/bootstrap.min.css" rel="stylesheet" type="text/css"/>
-	
-	<script src="/js/preloader.js"></script>
-	<link  href="/css/preloader.css" rel="stylesheet" type="text/css"/>
-	
-	<script src="js/mainpage.js"></script>
-	<link  href="css/header.css" rel="stylesheet" type="text/css"/>
-	<link  href="css/style.css" rel="stylesheet" type="text/css"/>
+<?php
+	echo getMeta("农燕萍应援站");
+	echo getBootStrap(true);
+	echo getHeaFooer(true);
+	echo getSelfStyle();
+?>
+	<!--Other Style-->
 	<link  href="css/effects.css" rel="stylesheet" type="text/css"/>
-	<title>农燕萍应援站</title>
 </head>
 <body>
-	<div id="preloader"><span></span><span></span><span></span><span></span><span></span></div>
+<?php echo getPreLoader();?>
 	<div class="main_div">
 <?php echo getHeader(0);?>
 	    <!--=========== BEGIN 图片轮播&基础提示框模块 ================-->  

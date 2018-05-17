@@ -2,32 +2,21 @@
 	require_once("../service/php/LCSrv.php");
 	require_once("../heafooer.php");
 ?>
-
 <!DOCTYPE html>
 <html>
 <head>
-    <meta charset="utf-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no">
-	<title>周边商城</title>
-
-	<script src="/js/jquery.min.js"></script>
-	<script src="/js/bootstrap.min.js"></script>
-	<link  href="/css/bootstrap.min.css" rel="stylesheet" type="text/css"/>
-	<script src="/js/header.js"></script>
-	<link  href="/css/header.css" rel="stylesheet" type="text/css"/>
-<?php if(!isset($_GET['ID'])){ ?>
-	<script src="/js/preloader.js"></script>
-	<link  href="/css/preloader.css" rel="stylesheet" type="text/css"/>
-<?php } ?>
+<?php
+	echo getMeta("周边商城");
+	echo getBootStrap(true);
+	echo getHeaFooer(!isset($_GET['ID']));
+	echo getSelfStyle();
+?>
 	<script src="js/imagezoom.min.js"></script>
 	<script src="js/jquery.flexslider-min.js"></script>
 	<link  href="css/flexslider.min.css" rel="stylesheet" type="text/css"/>
-	<link  href="css/style.css" rel="stylesheet" type="text/css"/>
 </head>
 <body>
-<?php if(!isset($_GET['ID'])){ ?>
-	<div id="preloader"><span></span><span></span><span></span><span></span><span></span></div>
-<?php } ?>
+<?php if(!isset($_GET['ID'])) echo getPreLoader();?>
 	<div class="main_div">
 <?php echo getHeader(3);?>
 		<!--=========== BEGIN 商城模块 ================-->  
@@ -178,13 +167,5 @@
 		<!--=========== END 商城模块 ================-->  
 <?php echo getFooter();?>
 	</div>
-	<script type="text/javascript">
-		$(document).ready(function() {
-			$('.flexslider').flexslider({
-				animation: "slide",
-				controlNav: "thumbnails"
-			});
-		});
-	</script>
 </body>
 </html>

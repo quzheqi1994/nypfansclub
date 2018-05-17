@@ -2,25 +2,16 @@
 <!doctype html>
 <html>
 <head>
-    <meta charset="utf-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no">
-	<title>行程安排</title>
-	<script src="/js/jquery.min.js"></script>
-	<script src="/js/bootstrap.min.js"></script>
-	<link  href="/css/bootstrap.min.css" rel="stylesheet" type="text/css"/>
-	<!--标题和预加载模块-->
-	<script src="/js/header.js"></script>
-	<link  href="/css/header.css" rel="stylesheet" type="text/css"/>
-	<script src="/js/preloader.js"></script>
-	<link  href="/css/preloader.css" rel="stylesheet" type="text/css"/>
-	
-	<script src="js/news.js"></script>
+<?php
+	echo getMeta("行程安排");
+	echo getBootStrap(true);
+	echo getHeaFooer(true);
+	echo getSelfStyle();
+?>
     <link  href="css/news.css" rel="stylesheet">
-	<script src="js/action.js" type="text/javascript"></script>
-    <link  href="css/style.css" rel="stylesheet" type="text/css"/>
 </head>
 <body>
-	<div id="preloader"><span></span><span></span><span></span><span></span><span></span></div>
+<?php echo getPreLoader();?>
 	<div class="main_div">
 		<!--<div data-am-widget="gotop" class="am-gotop am-gotop-fixed">
 			<a href="#top">
@@ -112,7 +103,7 @@
 						</a>
 					</div>
 					<div class="col-md-8 col-xs-8">
-						<h3 class="title"><a href="news.html">新闻标题</a></h3>
+						<h3 class="title"><a href="news.php">新闻标题</a></h3>
 						<div class="desc">猫咪不像人，猫咪的情绪不会写在脸上，反馈给我们的信息更多的应该是行为上肢体上的，当然从叫声中也会反应一些信息，那么要想“抓住它的心，就一定要抓住它的胃吗？”从它的行为和肢体语言当中我们可以读懂什么呢？</div>
 					</div>
 					<div class="col-md-12 col-xs-12 fill"></div>
