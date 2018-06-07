@@ -23,19 +23,10 @@
 	RewriteCond %{SERVER_PORT} !^443$
 	RewriteRule ^(.*)?$ https://%{SERVER_NAME}/$1 [R=301,L]
 
+404页面配置
+ 根目录下 .htaccess 文件中写入 ErrorDocument 404 /404.html
+ 
 数据库密码配置
  参考https://yq.aliyun.com/ziliao/53466
  phpMyAdmin配置
   $cfg['Servers'][$i]['password'] = '12345';//设置对应的密码
- 
-论坛邮箱SMTP设置
- ssl://smtp.exmail.qq.com 端口号465 开启验证 按照账密设置
-
-论坛改密码无效的bug
- member_getpasswd.php文件 中的 第16行改为 if($_GET['uid'] && $_GET['id']) {
-404页面配置
- 根目录下 .htaccess 文件中写入 ErrorDocument 404 /404.html
-xiunobbs url重定向
- 根目录下 .htaccess 文件中写入 RewriteRule ^(.*?)([^/]*)\.htm(.*)$ $1/index.php?$2.htm$3 [L]
-
-安装Git管理

@@ -1,0 +1,10 @@
+[xiunobbs论坛]
+QQ登陆：
+ 修改plugin/xn_qq_login/route/qq_login.php
+ 第九行  $return_url = substr(http_url_path(),0,-1).'qq_login-return.htm';
+
+邮箱SMTP设置
+ ssl://smtp.exmail.qq.com 端口号465 开启验证 按照账密设置
+
+xiunobbs url重定向
+ 根目录下 .htaccess 文件中写入 RewriteRule ^(.*?)([^/]*)\.htm$ $1/index.php?$2.htm$3 [L]

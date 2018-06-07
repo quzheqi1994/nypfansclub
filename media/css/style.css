@@ -22,7 +22,7 @@ a:hover,a:focus {text-decoration: none;}
 
 .box:after, .box:before{clear: both; content: '\0020'; display: block; visibility: hidden; width: 0; height: 0;}
 .box a:hover {color: #333;}
-.box .info {margin: 5px 0 10px 0;}
+.box .info {margin: 15px 0 10px 0;}
 .more {margin-top:20px;}
 .box .box-header{padding: 8px 15px;background-color: #FFD800;display: inline-block;border-radius: 5px;}
 .box .box-header h2{font-size: 14px;margin:0;color: #fff;text-transform: uppercase;}

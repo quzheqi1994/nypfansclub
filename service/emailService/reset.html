@@ -59,16 +59,16 @@
       var p1 = $("[name=password1]");
       if(p.val()!=p1.val()){
         $("#error").show();
-        $("#error").text("两次输入不一致");//密码输入不一致提示
+        $("#error").text("两次输入不一致");
       }
       if(p.val()&&p1.val()&&p.val()==p1.val()){
         $.jsonp({
-          url:"https://api.leancloud.cn/1/resetPassword/"+token,//如果页面运行在自己的服务器，需要写定一个绝对 URL,类似 "https://api.leancloud.cn/1.1/resetPassword/"
+          url:"https://api.leancloud.cn/1/resetPassword/"+token,
           data:{"password":p.val()},
           callbackParameter: "callback",
           cache: false,
           success:function(result){
-            $("#error").show();//成功和失败都会有提示信息, 共用 #error
+            $("#error").show();
             if(result.error){
               $("#error").text(result.error);
             }else{

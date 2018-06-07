@@ -1,10 +1,10 @@
-﻿<?php require_once("/heafooer.php");?>
+﻿<?php require_once("service/php/heafooer.php");?>
 <html>
 <head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
-    <title>农燕萍应援站</title>
-    <link href="/css/bootstrap.min.css" rel="stylesheet" />
+<?php
+    getMeta("农燕萍应援站");
+    getBootStrap(true);
+?>
     <link href="/css/style404.css" rel="stylesheet" />
 </head>
 <body>
@@ -60,7 +60,5 @@
     </section>
     <!-- HEADER DIV REPLICATE END -->
 <?php echo getFooter();?>
-    <script src="/js/jquery.min.js"></script>
-    <script src="/js/bootstrap.min.js"></script>
 </body>
 </html>

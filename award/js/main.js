@@ -58,7 +58,7 @@ function UpdateCardsMarksInfo(result){
 			
 			tstr = 'select * from Bind where tecent_id = "'+tecent_id+'"';
 			QueryExec(tstr,function(data){
-				mark = data.results[0].get("marksjs") - data.results[0].get("cost");
+				mark = data.results[0].get("marksjs") - data.results[0].get("cost") - data.results[0].get("freeze");
 				cardarr = data.results[0].get("cardjs").split(',');
 				sets_n = 9999;
 				for(j=0;j<5;j++){

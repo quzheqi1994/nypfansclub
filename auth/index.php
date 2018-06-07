@@ -9,9 +9,9 @@
 	<script>
 		window.onload=function(){
 			if (!AV.User.current()) 
-				window.setTimeout("location.href='signin'",500);
+				window.setTimeout("location.href='signin?from=<?php echo isset($_GET['from'])?$_GET['from']:'/award';?>'",500);
 			else
-				window.setTimeout("location.href='<?php echo isset($_GET['url'])?$_GET['url']:'/award'; ?>'",500);
+				window.setTimeout("location.href='<?php echo isset($_GET['from'])?$_GET['from']:'/award';?>'",500);
 		};
 	</script>
 

@@ -39,7 +39,7 @@
         $(function() {
           $(".form-sign").on('submit', function(e) {
             e.preventDefault();
-            login($('#inputUsername').val(),$('#inputPassword').val(),"../?from=sign&url=/award");
+            login($('#inputUsername').val(),$('#inputPassword').val(),"<?php echo isset($_GET['from'])?$_GET['from']:'/award';?>");
           });
         });
     </script>
