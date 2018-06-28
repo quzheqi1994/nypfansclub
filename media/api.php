@@ -25,10 +25,10 @@
     }
     function GenVideoList($playlistid,$coltype,$bWithDesc=false,$limit=0){
     	$html = '';
-    	$arr = CheckCache('VideoList',$playlistid);
+    	$arr = CheckCache('VideoListInner',$playlistid);
     	if(!$arr){
     		$arr = getArr("Track","playlistid=$playlistid",'name,alpicurl,arname,alname,id,lyric,date',"id");
-    		MakeCache('VideoList',$playlistid,$arr,'array');
+    		MakeCache('VideoListInner',$playlistid,$arr,'array');
     	}
     	foreach($arr as $v){
     		$html.="\n".'					<div class="'.GetColBox($coltype).'">';

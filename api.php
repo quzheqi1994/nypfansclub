@@ -11,7 +11,7 @@
         }
         foreach($arr as $v){
             $html.= '<div class="col-lg-3 col-md-4 col-sm-6 col-xs-6">';
-            $html.= '<a href="media/player.php?id='.$v['id'].'">';
+            $html.= '<a href="media/player.php?list='.$playlistid.'&id='.$v['id'].'">';
             $html.= '<div class="hover ehover'.$style.'">';
             $html.= '    <img class="img-responsive" src="'.$v['alpicurl'].'">';
             $html.= '    <div class="overlay"><h2>'.$v['name'].'</h2>';
@@ -52,7 +52,7 @@
     function GenCarouselAndAlert(){
         $arr1 = CheckCache('Carouse',70001);
         if(!$arr1){
-            $arr1 = getArr("Track","playlistid=70001",'url,id','id');
+            $arr1 = getArr("Track","playlistid=70001",'url,id,alpicurl','id');
             MakeCache('Carouse',70001,$arr1,'array');
         }
         $arr2 = CheckCache('Alert',70002);
@@ -71,10 +71,10 @@
         $html .= '
                 </ol>
                 <div class="carousel-inner">
-                    <div class="item active"><img src="'.$arr1[0]['url'].'"></div>';
+                    <div class="item active"><a href="'.$arr1[0]['url'].'"><img src="'.$arr1[0]['alpicurl'].'"></a></div>';
         for($i=1;$i<count($arr1);$i++)
             $html .= '
-                    <div class="item"><img src="'.$arr1[$i]['url'].'"></div>';
+                    <div class="item"><a href="'.$arr1[$i]['url'].'"><img src="'.$arr1[$i]['alpicurl'].'"></a></div>';
         $html .= '
                 </div>
             </div>

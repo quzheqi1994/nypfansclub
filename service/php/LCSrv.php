@@ -66,8 +66,8 @@
             $sql .=  $bAsc ? "asc":"desc";
         }
         $result = QueryExec($sql);
-        if(!$result) return NULL;
         if(!$result || !isset($result['results'])) return NULL;
+        $result = $result['results'];
         $count = count($result);
         if($count>0){
             for($i=0;$i < $count;$i++)
