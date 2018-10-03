@@ -30,3 +30,5 @@
  参考https://yq.aliyun.com/ziliao/53466
  phpMyAdmin配置
   $cfg['Servers'][$i]['password'] = '12345';//设置对应的密码
+
+配置Redis

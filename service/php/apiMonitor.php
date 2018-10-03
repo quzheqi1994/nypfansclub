@@ -15,7 +15,7 @@
 	//系统级常量
     date_default_timezone_set('PRC');
 	$time_init = 1536395276;//浮点值unix初始时间戳 当前为 201809080000
-    $today = intval(strtotime(date("Y-m-d 22:04:00"))) - $time_init;
+    $today = intval(strtotime(date("Y-m-d 00:00:00"))) - $time_init;
 
 	if( !isset($_GET['key']) || !isset($_GET['init']))
 		ret(-101);//未传入用户键值
